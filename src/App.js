@@ -1,24 +1,27 @@
-import logo from './logo.svg';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Home from './Components/Home';
+import Login from './Components/Login';
+import Signup from './Components/Signup';
+import PgFOF from './Components/PgFOF';
 import './App.css';
+import Cart from './Components/Cart';
+import Profile from './Components/Profile';
+import CrudDemo from './Components/CrudDemo';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route exact path='/' element={<Home/>}/>
+        <Route exact path='/home' element={<Home/>}/>
+        <Route exact path='/login' element={<Login/>}/>
+        <Route exact path='/signup' element={<Signup/>}/>
+        <Route exact path='/cart' element={<Cart/>}/>
+        <Route exact path='/profile' element={<Profile/>}/>
+        <Route exact path='/crudemo' element={<CrudDemo/>}/>
+        <Route path='*' element={<PgFOF/>}/>
+      </Routes>
+    </BrowserRouter>
   );
 }
 

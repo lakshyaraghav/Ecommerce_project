@@ -1,0 +1,31 @@
+.nav-left {
+    display: flex;
+    flex-grow: 1;
+  }
+  
+  .nav-left > a {
+    margin-right: 15px;
+  }
+  
+  .nav-right {
+    display: flex;
+    align-items: center;
+  }
+  
+  .nav-right > a {
+    margin-left: 15px;
+  }
+  
+  .cart-btn {
+    display: flex;
+    align-items: center;
+  }
+  .cart-btn img{
+    width: 30px;
+  }
+  
+  .profile-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+  }
